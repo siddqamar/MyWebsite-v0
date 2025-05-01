@@ -8,6 +8,17 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+/* These settings create a fullscreen app-like experience */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  overscroll-behavior-y: none; /* Prevents pull-to-refresh and overscroll glow */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -18,9 +29,43 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Container for our smooth scroll functionality */
+.smooth-scroll-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+/* Each page in our single-page application */
+.smooth-scroll-container > main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
+/* Touch feedback animation */
+@keyframes touch-ripple {
+  0% {
+    opacity: 0.7;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.touch-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  animation: touch-ripple 0.8s ease-out;
+  pointer-events: none; /* Ensures the ripple doesn't interfere with touch events */
+  z-index: 50;
+}

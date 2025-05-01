@@ -3,12 +3,14 @@ import './globals.css'
 import AnimatedBackground from './components/AnimatedBackground'
 import SmoothScroll from './components/SmoothScroll'
 import Navigation from './components/Navigation'
+import SwipeIndicator from './components/SwipeIndicator'
+import TouchFeedback from './components/TouchFeedback'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Siddiqui Qamar - AI Engineer',
-  description: 'AI Engineer focusing on Prompt Engineering & Custom GPT AI Development',
+  title: 'Siddiqui Qamar - AI/ML',
+  description: 'Python developer learning ML and how AI agents are used',
 }
 
 export default function RootLayout({
@@ -20,9 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AnimatedBackground />
+        <TouchFeedback />
         <SmoothScroll>
           <main className="relative z-10">
             <Navigation />
+            <SwipeIndicator />
             {children}
           </main>
         </SmoothScroll>
@@ -30,4 +34,3 @@ export default function RootLayout({
     </html>
   )
 }
-

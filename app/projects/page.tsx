@@ -5,18 +5,18 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 const projects = [
   {
-    title: "Free Transcript Maker",
-    description: "A Python program that converts audio into text with accuracy, supported by OpenAI's speech-to-text model.",
-    link: "https://huggingface.co/spaces/siddqamar/FreeTranscriptMaker"
-  },
-  {
     title: "Sentiment Reveal",
-    description: "Analyze the sentiment of product reviews in English, Dutch, German, French, Italian, and Spanish. Focused Sentiment Analysis for eCommerce.",
+    description: "This is very important for ecommerce businesses to understand if customer reviews are positive, negative or neutral. That’s where Sentiment Reveal comes in, it understand five languages including Spanish. Built on top of open source model from Hugging Face.",
     link: "https://huggingface.co/spaces/siddqamar/SentimentReveal"
   },
   {
+    title: "Quick Transcribe AI",
+    description: "Get accurate transcripts for your voicemails, lectures and meetings. Works with both audio and video files. Powered by OpenAI model.",
+    link: "https://huggingface.co/spaces/siddqamar/QuickTranscribeAI"
+  },
+  {
     title: "Exam Preparation Assistant",
-    description: "This AI assistant is built to boost your confidence through practice questions and help you overcome anxiety. It is powered by the Qwen 32B parameters model.",
+    description: "I created this AI powered buddy to overcome exam anxiety. It generates customized mock questions based on your understanding level, preferred question types and areas you want to improve. Initially designed for personal use but later made it public for all the students.",
     link: "https://huggingface.co/spaces/siddqamar/Exam-Preparation-Assistant"
   }
 ]

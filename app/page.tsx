@@ -10,9 +10,14 @@ export default function Home() {
       <p className="text-lg md:text-xl mb-12 max-w-2xl leading-relaxed">
         I help you solve with python code and build lightweight model using your data 🔥
       </p>
-      <Link href="/social" className="cta-button relative inline-block px-6 py-3 text-lg font-bold text-black bg-white rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 hover:-translate-y-1">
+      <a 
+        href="https://www.upwork.com/freelancers/~01f56694f7b4cf0541?mp_source=share" 
+        className="cta-button relative inline-block px-6 py-3 text-lg font-bold text-black bg-white rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 hover:-translate-y-1"
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
         <span className="relative z-10 tracking-wide">Hire Me for Freelance Work</span>
-      </Link>
+      </a>
     </div>
   )
 }

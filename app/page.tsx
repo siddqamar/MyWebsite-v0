@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className={`min-h-screen flex flex-col justify-center items-center text-center px-4 ${montserrat.className}`}>
       <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Siddiqui Qamar</h1>
-      <p className="text-lg md:text-xl mb-12 max-w-2xl leading-relaxed">
-        I help you solve with python code and build lightweight model using your data 🔥
+      <p className="text-lg md:text-xl mb-12 max-w-lg leading-relaxed">
+        I code in Python to build lightweight models and AI agents that deliver faster results 🔥
       </p>
       <a 
         href="https://www.upwork.com/freelancers/~01f56694f7b4cf0541?mp_source=share" 

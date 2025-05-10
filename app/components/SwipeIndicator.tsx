@@ -6,8 +6,6 @@ import { useEffect, useState } from 'react'
 export default function SwipeIndicator() {
   const pathname = usePathname()
   const [visible, setVisible] = useState(true)
-  const sections = ['/', '/about', '/projects', '/social']
-  const currentIndex = sections.indexOf(pathname)
   
   // Hide indicator after 5 seconds
   useEffect(() => {
@@ -21,8 +19,9 @@ export default function SwipeIndicator() {
     return () => clearTimeout(timer)
   }, [pathname])
   
-  // Don't show indicator on the last page
-  if (currentIndex === sections.length - 1) return null
+  // Only show indicator on the home page
+  // This must come AFTER the hooks are called
+  if (pathname !== '/') return null
   
   return (
     <div 
@@ -47,7 +46,7 @@ export default function SwipeIndicator() {
             <path d="m18 15-6-6-6 6"/>
           </svg>
         </div>
-        <span className="text-xs text-gray-300 font-medium">Scroll Up / Swipe Up</span>
+        <span className="text-xs text-gray-300 font-medium">Swipe Up</span>
       </div>
     </div>
   )
